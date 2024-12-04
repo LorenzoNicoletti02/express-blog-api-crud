@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "name": "express-blog-routing",
+  "version": "1.0.0",
+  "description": "**Esercizio-1**\r Creiamo il nostro blog personale e giorno dopo giorno lo potremo arricchire con nuove funzionalità sulla base di quello che impareremo.\r - Creiamo il progetto base con una rotta `/` che ritorna un testo semplice con scritto ”Server del mio blog”\r - Creiamo un array dove inserire una lista di almeno 5 post, per ognuno indicare titolo, contenuto, immagine e tags (tags è un array di stringhe)\r - Creiamo poi una rotta `/bacheca` che restituisca un oggetto json con la lista dei post e il conteggio, partendo da un array.\r - Configuriamo gli asset statici sull’applicazione in modo che si possano visualizzare le immagini associate ad ogni post.\r - Testare su postman",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
