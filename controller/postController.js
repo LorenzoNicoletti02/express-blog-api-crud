@@ -6,13 +6,12 @@ const index = (req, res) => {
 
 const show = (req, res) => {
     let foundPost = null;
+    console.log(postList);
+    
     for (let i = 0; i < postList.length; i++) {
-        console.log(i);
-        
         const curElem = postList[i];
         if (curElem.id === parseInt(req.params.id)) {
             foundPost = curElem;
-            console.log("sono qui");
         }
     }
     if (foundPost === null) {
