@@ -70,8 +70,18 @@ const modify = (req, res) => {
 
 // Delete (Elimina un elemento)
 const destroy = (req, res) => {
-    const postId = req.params.id;
-    res.json(`Cancellazione del post numero ${postId}`);
+    // Prendo il prametro ID dall'URL
+    const paramId = parseInt(req.params.id);
+    
+    // Troviamo l'index dell'array che ha lo stesso ID preso dal parametro
+    const indexToDestroy = postList.findIndex((curElem) => {
+        return curElem.id === paramId;
+    });
+
+    // Eliminiamo l'elelemto a questo index con  il metodo "splice"
+    postList.splice(indexToDestroy, 1);
+    res.json(postList);
+    
 }
 
 module.exports = {
