@@ -14,7 +14,7 @@ router.get("/:id", controller.show)
 router.post("/", controller.create)
 
 // Update
-router.put("/", controller.update)
+router.put("/:id", controller.update)
 
 // Modify
 router.patch("/:id", controller.modify)
