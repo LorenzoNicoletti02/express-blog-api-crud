@@ -1,25 +1,25 @@
 //Creo le rotte della risorsa ricette
 const express = require("express");
 const router = express.Router();
-const postList = require("../data/posts");
 const controller = require("../controller/postController");
+const middlewareId = require("../middleware/middlewareCheckId");
 
 // Index
 router.get("/", controller.index);
 
 // Show
-router.get("/:id", controller.show)
+router.get("/:id", middlewareId, controller.show)
 
 // Create
 router.post("/", controller.create)
 
 // Update
-router.put("/:id", controller.update)
+router.put("/:id", middlewareId, controller.update)
 
 // Modify
-router.patch("/:id", controller.modify)
+router.patch("/:id", middlewareId, controller.modify)
 
 // Destroy
-router.delete("/:id", controller.destroy)
+router.delete("/:id", middlewareId, controller.destroy)
 
 module.exports = router;
