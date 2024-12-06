@@ -10,9 +10,10 @@ const middlewareId = (req, res, next) => {
     const oggettoTrovato = postList.find((curElem) => {
         return curElem.id === paramId;
     });
-
+    console.log(oggettoTrovato);
+    
     // Controllare se l'oggetto è stato trovato
-    if (oggettoTrovato === true) {
+    if (oggettoTrovato) {
         next();
     } else {
         res.statusCode = 404;
