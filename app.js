@@ -4,6 +4,7 @@ const port = 3000;
 const post = require("./data/posts");
 const postRouter = require("./routers/routersPosts");
 
+app.use(express.json());
 app.use(express.static("public"));
 app.use("/posts", postRouter);
 
